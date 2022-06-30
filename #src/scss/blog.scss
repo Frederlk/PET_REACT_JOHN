@@ -1,0 +1,41 @@
+.blog {
+   &__container {
+      max-width: 718px;
+   }
+   &__content {
+      padding: 20px 0px 50px 0px;
+   }
+
+   &__subtitle {
+      display: inline-block;
+      margin: 0px 0px 10px 0px;
+   }
+
+   &__items {
+   }
+
+   &__item {
+      padding: 30px 0px;
+      border-bottom: 1px solid #e0e0e0;
+      @media (max-width: 3px) {
+         padding: 18px 0px;
+      }
+   }
+
+   &__info {
+      font-size: 20px;
+      margin: 0px 0px 10px 0px;
+      @media (max-width: 3px) {
+         font-size: 16px;
+      }
+      span {
+         margin: 0px 20px;
+         @media (max-width: 3px) {
+            margin: 0px 15px;
+         }
+      }
+   }
+
+   &__text {
+   }
+}

@@ -1,0 +1,50 @@
+.article {
+   &__container {
+      max-width: 718px;
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 50 / 34 * 100%;
+      margin: 0px 0px 30px 0px;
+      @media (max-width: $md3+px) {
+         margin: 0px 0px 20px 0px;
+      }
+   }
+
+   &__info {
+      display: flex;
+   }
+
+   &__year {
+   }
+
+   &__categories {
+      margin: 0px 0px 0px 15px;
+   }
+
+   &__body {
+      margin: 20px 0px 0px 0px;
+   }
+
+   &__text {
+      p {
+         margin: 0px 0px 20px 0px;
+      }
+   }
+
+   img {
+      margin: 0px 0px 25px 0px;
+      max-width: 100%;
+   }
+
+   &__subtitle {
+      margin: 15px 0px;
+      font-weight: 500;
+      font-size: 30px;
+      &_sm {
+         font-size: 24px;
+      }
+   }
+}
