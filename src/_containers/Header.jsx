@@ -1,31 +1,30 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
         <header className="header">
             <div className="header__container">
-                <div class="header__menu menu">
-                    <div class="menu__icon icon-menu">
+                <div className="header__menu menu">
+                    <button type="button" className="menu__icon icon-menu">
                         <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <nav class="menu__body">
-                        <ul class="menu__list">
-                            <li>
-                                <a href="" class="menu__link @@if(link==1){_active}">
+                    </button>
+                    <nav className="menu__body">
+                        <ul className="menu__list">
+                            <li className="menu__item">
+                                <NavLink to="/" className="menu__link">
+                                    Home
+                                </NavLink>
+                            </li>
+                            <li className="menu__item">
+                                <NavLink to="/works" className="menu__link">
                                     Works
-                                </a>
+                                </NavLink>
                             </li>
-                            <li>
-                                <a href="" class="menu__link @@if(link==2){_active}">
+                            <li className="menu__item">
+                                <NavLink to="/blog" className="menu__link">
                                     Blog
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="menu__link @@if(link==3){_active}">
-                                    Contact
-                                </a>
+                                </NavLink>
                             </li>
                         </ul>
                     </nav>

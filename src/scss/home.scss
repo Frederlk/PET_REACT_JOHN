@@ -1,15 +1,12 @@
 //====================================================================================================
 .hello {
-    padding: 38px 0px 70px 0px;
-    @media (max-width: $md1+px) {
-        padding: 0px 0px 70px 0px;
+    @media (min-width: $pc) {
+        padding-top: rem(40);
     }
-    @media (max-width: $md3+px) {
-        padding: 0px 0px 60px 0px;
-    }
+    @include adaptiveValue("padding-bottom", 70, 60, 892, 767.98, 1);
     &__container {
         display: flex;
-        @media (max-width: $md3+px) {
+        @media (max-width: $mobile) {
             text-align: center;
             flex-direction: column-reverse;
         }
@@ -18,155 +15,137 @@
     &__content {
         align-items: flex-start;
         flex: 1 1 auto;
-        margin: 18px 115px 0px 0px;
-        @media (max-width: $md1+px) {
-            margin: 18px 50px 0px 0px;
+        margin: rem(18) rem(115) 0px 0px;
+        @media (max-width: $pc) {
+            margin-right: rem(50);
         }
-        @media (max-width: $md3+px) {
-            margin: 0px 0px 0px 0px;
-        }
-        @media (max-width: $md3+px) {
-            *:last-child {
-                margin-bottom: 0;
-            }
+        @media (max-width: $mobile) {
+            margin: 0;
         }
     }
 
     &__title {
-        margin: 0px 0px 30px 0px;
-        @media (max-width: $md3+px) {
-            margin: 0px 0px 20px 0px;
-        }
+        @include adaptiveValue("margin-bottom", 30, 20, 892, 767.98, 1);
     }
 
     &__text {
-        margin: 0px 0px 35px 0px;
-        @media (max-width: $md3+px) {
-            margin: 0px 0px 25px 0px;
-            padding: 0px 6px;
+        @include adaptiveValue("margin-bottom", 35, 25, 892, 767.98, 1);
+        @media (max-width: $mobile) {
+            padding: 0px rem(6);
         }
     }
 
     &__btn {
-        margin: 0px 0px 35px 0px;
-        @media (max-width: $md3+px) {
-            margin: 0px 0px 25px 0px;
-        }
+        @include adaptiveValue("margin-bottom", 35, 25, 892, 767.98, 1);
     }
 
-    &__avatar {
-        flex: 0 0 243px;
-        height: 243px;
+    &__avatar-ibg {
+        flex: 0 0 rem(245);
+        height: rem(245);
         position: relative;
         border-radius: 50%;
         overflow: hidden;
-        box-shadow: -5px 13px 0 0 #edf7fa;
+        box-shadow: rem(-5) rem(13) 0 0 $light_01;
         img {
             max-width: 100%;
         }
-        @media (max-width: $md3+px) {
-            flex: 0 0 170px;
-            height: 170px;
-            margin: 0px 0px 40px 0px;
+        @media (max-width: $mobile) {
+            flex: 0 0 rem(200);
+            width: rem(200);
+            margin: 0px auto;
+            margin-bottom: rem(40);
         }
     }
 }
 //====================================================================================================
 
 .recent-posts {
-    padding: 25px 0px 16px 0px;
-    background-color: #edf7fa;
-    @media (max-width: $md3+px) {
-        padding: 25px 0px 22px 0px;
-    }
+    padding-top: rem(25);
+    @include adaptiveValue("padding-bottom", 32, 40, 892, 767.98, 1);
+    background-color: $primary_03;
     &__container {
     }
 
     &__header {
-        margin: 0px 0px 15px 0px;
+        @include adaptiveValue("margin-bottom", 15, 20, 892, 767.98, 1);
         display: flex;
-        @media (max-width: $md3+px) {
-            margin: 0px 0px 20px 0px;
-        }
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__title {
-        padding: 0px 20px 0px 0px;
-        flex: 1 1 auto;
-        @media (max-width: $md3+px) {
-            padding: 0px 0px 0px 0px;
+        text-align: left;
+        @media (min-width: $mobile) {
+            padding-right: rem(20);
         }
     }
 
     &__view-all {
-        font-size: 16px;
-        color: #00a8cc;
-        line-height: 23px;
-        flex: 0 0 auto;
-        @media (max-width: $md3+px) {
-            display: none;
+        font-size: rem(16);
+        line-height: math.div(23, 16);
+        color: $primary_01;
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary_02;
+            }
         }
     }
 
     &__items {
-        margin: 0px -10px;
-        @media (min-width: $md3+px) {
-            display: flex;
-        }
-    }
-
-    &__column {
-        flex: 0 1 50%;
-        padding: 0px 10px;
-        margin: 0px 0px 16px 0px;
-        @media (max-width: $md3+px) {
-            padding: 0px 2px;
+        display: grid;
+        gap: rem(20);
+        @media (min-width: $mobile) {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
     &__item {
     }
 }
+
 .recent-post {
     height: 100%;
-    padding: 24px;
-    background-color: #fff;
-    box-shadow: 0px 4px 10px rgba(187, 225, 250, 0.25);
-    border-radius: 4px;
-    @media (max-width: $md3+px) {
-        padding: 10px 20px 20px 20px;
+    padding: rem(24);
+    background-color: $white;
+    box-shadow: 0px rem(4) rem(10) rgba(187, 225, 250, 0.25);
+    border-radius: rem(4);
+    @media (max-width: $mobile) {
+        padding: rem(10) rem(20) rem(20) rem(20);
     }
     &__title {
         display: inline-block;
         font-weight: 700;
-        font-size: 26px;
+        @include adaptiveValue("font-size", 26, 22, 892, 767.98, 1);
         line-height: 38 / 26 * 100%;
-        margin: 0px 0px 20px 0px;
+        @include adaptiveValue("margin-bottom", 26, 10, 892, 767.98, 1);
         color: inherit;
         transition: color 0.3s ease 0s;
-        @media (min-width: $md2+px) {
+        @media (any-hover: hover) {
             &:hover {
-                color: #ff6464;
+                color: $secondary_02;
             }
-        }
-        @media (max-width: $md3+px) {
-            margin: 0px 0px 10px 0px;
-            font-size: 22px;
         }
     }
 
     &__info {
-        font-size: 18px;
+        @include adaptiveValue("font-size", 18, 16, 892, 767.98, 1);
         line-height: 26 / 18 * 100%;
-        margin: 0px 0px 15px 0px;
-        span {
-            margin: 0px 26px;
-            @media (max-width: $md2+px) {
-                margin: 0px 10px;
+        margin-bottom: rem(15);
+        .divide {
+            display: inline-flex;
+            margin: 0px rem(26);
+            @media (max-width: $tablet) {
+                margin: 0px rem(10);
             }
         }
-        @media (max-width: $md3+px) {
-            font-size: 16px;
+        span {
+            &:not(:last-child) {
+                &::after {
+                    content: ",";
+                    margin-right: rem(5);
+                }
+            }
         }
     }
 
@@ -178,10 +157,8 @@
 //========================================================================================================================================================
 
 .featured-works {
-    padding: 30px 0px 80px 0;
-    @media (max-width: $md3+px) {
-        padding: 20px 0px 50px 0px;
-    }
+    @include adaptiveValue("padding-top", 30, 20, 892, 767.98, 1);
+    @include adaptiveValue("padding-bottom", 50, 80, 892, 767.98, 1);
     &__container {
     }
 
@@ -189,12 +166,12 @@
     }
 
     &__items {
-        @media (max-width: $md3+px) {
+        @media (max-width: $mobile) {
             display: flex;
             overflow: auto;
             .works__item {
                 flex: 0 0 90%;
-                margin: 0px 18px 0px 0px;
+                margin-right: rem(18);
             }
         }
     }
@@ -202,52 +179,58 @@
 
 .works {
     &__item {
-        padding: 30px 0 17px 0px;
-        border-bottom: 1px solid #e0e0e0;
-        @media (min-width: $md3+px) {
-            padding: 35px 0;
+        padding: rem(30) 0 rem(17) 0px;
+        border-bottom: rem(1) solid $light_02;
+        @media (min-width: $mobile) {
+            padding: rem(35) 0;
             display: flex;
             align-items: flex-start;
         }
     }
 
-    &__image {
-        flex: 0 0 246px;
+    &__image-ibg {
+        flex: 0 0 rem(246);
         display: block;
-        min-height: 180px;
-        border-radius: 6px;
+        min-height: rem(180);
+        border-radius: rem(6);
         overflow: hidden;
-        @media (max-width: $md3+px) {
-            margin: 0px 0px 17px 0px;
-            padding: 0px 0px 67.85% 0px;
+        @media (max-width: $mobile) {
+            margin-bottom: rem(17);
+            padding-bottom: 67.85%;
         }
     }
 
     &__body {
         flex: 1 1 auto;
-        padding: 0px 0px 0px 18px;
-        @media (max-width: $md3+px) {
-            padding: 0;
+        @media (min-width: $mobile) {
+            padding-left: rem(18);
         }
     }
 
     &__title {
         display: inline-flex;
-        margin: 0px 0px 16px 0px;
+        margin-bottom: rem(16);
     }
 
     &__info {
-        margin: 0px 0px 16px 0px;
+        display: flex;
+        align-items: center;
+        margin-bottom: rem(16);
+        span {
+            &:not(:last-child) {
+                &::after {
+                    content: ",";
+                    margin-right: rem(5);
+                }
+            }
+        }
     }
 
     &__year {
     }
 
     &__category {
-        margin: 0px 0px 0px 26px;
-        @media (max-width: $md3+px) {
-            margin: 0px 0px 0px 22px;
-        }
+        @include adaptiveValue("margin-left", 26, 22, 892, 767.98, 1);
     }
 
     &__text {

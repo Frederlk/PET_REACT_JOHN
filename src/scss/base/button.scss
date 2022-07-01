@@ -1,19 +1,19 @@
-.button {
+.btn {
     display: inline-flex;
-    padding: 0px 20px;
-    height: 47px;
-    background: #ff6464;
-    border-radius: 2px;
+    padding: 0px rem(20);
+    height: rem(47);
+    background: $secondary_02;
+    border-radius: rem(2);
     text-align: center;
     font-weight: 500;
-    font-size: 20px;
+    font-size: rem(20);
     line-height: 29 / 20 * 100%;
-    color: #fff;
+    color: $white;
     align-items: center;
     transition: all 0.3s ease 0s;
     @media (any-hover: hover) {
         &:hover {
-            background-color: #142850;
+            background-color: $primary_02;
         }
     }
 }

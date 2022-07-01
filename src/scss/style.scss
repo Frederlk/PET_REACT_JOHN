@@ -20,14 +20,23 @@ $fontSize: rem(14); // где 14(px) - размер шрифта по умолч
 
 // Основные цвета
 $mainColor: #000; // Цвет шрифта по умолчанию
+$white: #fff;
+$primary_01: #00a8cc;
+$primary_02: #142850;
+$primary_03: #edf7fa;
+$secondary_01: #ff7c7c;
+$secondary_02: #ff6464;
+$gray_01: #8695a4;
+$light_01: #edf7fa;
+$light_02: #e0e0e0;
 
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
 // Минимальная ширина страницы
 $minWidth: 320;
 // Ширина полотна (макета)
-$maxWidth: 1920;
+$maxWidth: 1152;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
-$maxWidthContainer: 1170;
+$maxWidthContainer: 892;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 30;
@@ -138,14 +147,13 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
-@import "blog";
-@import "works";
-@import "articles";
+// @import "blog";
+// @import "works";
+// @import "articles";
 
 .page {
-    flex: 1 1 auto;
-    padding: 90px 0px 0px 0px;
-    @media (max-width: $md3+px) {
-        padding: 30px 0px 0px 0px;
+    padding-top: rem(90);
+    @media (max-width: $mobile) {
+        padding-top: rem(30);
     }
 }

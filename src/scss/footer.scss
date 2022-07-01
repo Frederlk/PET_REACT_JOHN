@@ -1,5 +1,5 @@
 .footer {
-    padding: 50px 0px;
+    padding: rem(50) 0px;
     text-align: center;
     &__content {
     }
@@ -8,7 +8,7 @@
     }
 
     &__copy {
-        font-size: 14px;
+        font-size: rem(14);
     }
 }
 .social {
@@ -16,16 +16,13 @@
     justify-content: center;
     align-items: center;
     &__item {
-        font-size: 30px;
+        font-size: rem(30);
         color: inherit;
-        margin: 0px 17px 25px 17px;
+        margin: 0px rem(17) rem(25) rem(17);
         transition: all 0.3s ease 0s;
-        &:last-child {
-            margin: 0px 17px 25px 17px;
-        }
-        @media (min-width: $md2+px) {
+        @media (any-hover: hover) {
             &:hover {
-                color: #ff6464;
+                transform: translate(0px, rem(-10));
             }
         }
     }

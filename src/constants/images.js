@@ -20,4 +20,15 @@ const homeImages = {
     works04,
 };
 
-export default { articleImages, homeImages };
+import fb from "./../img/icons/fb.svg";
+import linkedIn from "./../img/icons/Linkedin.svg";
+import insta from "./../img/icons/insta.svg";
+import tweet from "./../img/icons/tweet.svg";
+const icons = {
+    fb,
+    linkedIn,
+    insta,
+    tweet,
+};
+
+export default { articleImages, homeImages, icons };

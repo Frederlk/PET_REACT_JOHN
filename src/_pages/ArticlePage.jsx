@@ -2,26 +2,26 @@ import React from "react";
 
 const Article = () => {
     return (
-        <div class="article">
-            <div class="article__container _container">
-                <div class="article__title">Designing Dashboards with usability in mind</div>
-                <div class="article__info">
-                    <div class="article__year year">2020</div>
-                    <a href="" class="article__categories category">
+        <div className="article">
+            <div className="article__container">
+                <div className="article__title">Designing Dashboards with usability in mind</div>
+                <div className="article__info">
+                    <div className="article__year year">2020</div>
+                    <a href="" className="article__categories category">
                         Dashboard, User Experience Design
                     </a>
                 </div>
-                <div class="article__body">
-                    <div class="article__text text">
+                <div className="article__body">
+                    <div className="article__text text">
                         <p>
                             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
                             enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
                         </p>
                     </div>
                     <img src="img/article/article01.jpg" alt="" />
-                    <div class="article__subtitle">Heading 1</div>
-                    <div class="article__subtitle article__subtitle_sm">Heading 2</div>
-                    <div class="article__text text">
+                    <div className="article__subtitle">Heading 1</div>
+                    <div className="article__subtitle article__subtitle_sm">Heading 2</div>
+                    <div className="article__text text">
                         <p>
                             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
                             enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
