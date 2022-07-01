@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { data } from "../../constants";
-import RecentPostItem from "./RecentPostItem";
+import { BlogItem } from "../../_components";
 
 const RecentPosts = () => {
     return (
@@ -16,7 +16,7 @@ const RecentPosts = () => {
                 <div className="recent-posts__items">
                     {data.posts.map((item, i) => {
                         if (i > 2) return;
-                        return <RecentPostItem key={i} data={item} />;
+                        return <BlogItem key={i} data={item} />;
                     })}
                 </div>
             </div>

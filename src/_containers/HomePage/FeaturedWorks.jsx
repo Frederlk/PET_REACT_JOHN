@@ -1,6 +1,6 @@
 import React from "react";
 import { data } from "../../constants";
-import WorkItem from "../../_components/WorkItem";
+import { WorkItem } from "../../_components";
 
 const FeaturedWorks = () => {
     return (
