@@ -1,5 +1,5 @@
 import { Header, Footer } from "./_containers";
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import * as flsFunctions from "./js/functions";
 import { Spinner } from "./_components";
@@ -34,7 +34,7 @@ const App = () => {
                         <Route path="/" element={<Home />} />
                         <Route path="/blog" element={<Blog />} />
                         <Route path="/works" element={<Works />} />
-                        <Route path="/works/:" element={<Article />} />
+                        <Route path="/works/:article" element={<Article />} />
                         <Route path="*" element={<Page404 />} />
                     </Routes>
                 </Suspense>

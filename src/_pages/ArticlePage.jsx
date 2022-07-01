@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import data from "../constants/data";
+import { useLocation } from "react-router-dom";
 
 const Article = () => {
+    const { pathname } = useLocation();
+    const [productData, setProductData] = useState(data.works.find((a) => a.link === pathname.slice(7, pathname.length)));
+    console.log(productData);
     return (
         <div className="article">
             <div className="article__container">

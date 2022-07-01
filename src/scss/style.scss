@@ -148,12 +148,8 @@ body {
 // Подключение стилей отдельных страниц
 @import "home";
 @import "blog";
-// @import "works";
-// @import "articles";
+@import "articles";
 
 .page {
-    padding-top: rem(90);
-    @media (max-width: $mobile) {
-        padding-top: rem(30);
-    }
+    @include adaptiveValue("padding-top", 90, 30, 892, 767.98, 1);
 }

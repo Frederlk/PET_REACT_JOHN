@@ -13,7 +13,7 @@ const BlogPage = () => {
 
             <div className="blog">
                 <div className="blog__container">
-                    <h1 className="blog__title title">Blog</h1>
+                    <h2 className="blog__title title">Blog</h2>
                     <div className="blog__content">
                         <div className="blog__items">
                             {data.posts.map((item, i) => (

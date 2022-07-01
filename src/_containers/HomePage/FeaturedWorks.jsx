@@ -9,8 +9,9 @@ const FeaturedWorks = () => {
                 <h2 className="featured-works__title title-posts">Featured works</h2>
                 <div className="featured-works__items works">
                     {data.works.map((item, i) => {
-                        if (i > 2) return;
-                        return <WorkItem key={i} data={item} />;
+                        if (i < 3) {
+                            return <WorkItem key={i} data={item} />;
+                        }
                     })}
                 </div>
             </div>

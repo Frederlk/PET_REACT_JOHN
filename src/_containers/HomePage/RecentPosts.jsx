@@ -15,8 +15,9 @@ const RecentPosts = () => {
                 </div>
                 <div className="recent-posts__items">
                     {data.posts.map((item, i) => {
-                        if (i > 2) return;
-                        return <BlogItem key={i} data={item} />;
+                        if (i < 2) {
+                            return <BlogItem key={i} data={item} />;
+                        }
                     })}
                 </div>
             </div>

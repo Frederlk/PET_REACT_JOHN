@@ -47,8 +47,7 @@ const works = [
         img: homeImages.works01,
         previewText: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
         duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.`,
-        post: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-        duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.`,
+        post: ``,
     },
     {
         title: "Vibrant Portraits of 2020",
