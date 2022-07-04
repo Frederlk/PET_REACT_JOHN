@@ -1,18 +1,18 @@
 .title {
     font-weight: 700;
     font-size: rem(44);
-    line-height: 60 / 44 * 100%;
+    line-height: math.div(60, 44);
     @media (max-width: $mobile) {
         font-size: rem(32);
     }
     &_sm {
         font-size: rem(34);
-        line-height: 50 / 34 * 100%;
+        line-height: math.div(50, 34);
     }
 }
 .text {
     font-size: rem(16);
-    line-height: 23 / 16 * 100%;
+    line-height: math.div(23, 16);
 }
 .title-posts {
     font-size: rem(22);
@@ -26,7 +26,7 @@
     font-weight: 700;
     font-size: rem(30);
     color: inherit;
-    line-height: 44 / 30 * 100%;
+    line-height: math.div(44, 30);
     transition: color 0.3s ease 0s;
     @media (max-width: $mobile) {
         font-size: rem(24);
@@ -61,15 +61,18 @@
 
 .category {
     font-size: rem(20);
-    line-height: 29 / 20 * 100%;
+    line-height: math.div(29, 20);
     color: $gray_01;
     transition: all 0.3s ease 0s;
     @media (max-width: $mobile) {
         font-size: rem(16);
     }
-    @media (any-hover: hover) {
-        &:hover {
-            color: inherit;
+    span {
+        &:not(:last-child) {
+            &::after {
+                content: ",";
+                margin-right: rem(5);
+            }
         }
     }
 }

@@ -4,6 +4,12 @@ import { data } from "../../constants";
 import { BlogItem } from "../../_components";
 
 const RecentPosts = () => {
+    const sortCategory = (a, b) => {
+        if (a > b) return -1;
+        if (a < b) return 1;
+        return 0;
+    };
+
     return (
         <section className="recent-posts">
             <div className="recent-posts__container">
@@ -14,11 +20,16 @@ const RecentPosts = () => {
                     </Link>
                 </div>
                 <div className="recent-posts__items">
-                    {data.posts.map((item, i) => {
-                        if (i < 2) {
-                            return <BlogItem key={i} data={item} />;
-                        }
-                    })}
+                    {data.posts
+                        .slice()
+                        .sort((a, b) => {
+                            return sortCategory(a.date, b.date);
+                        })
+                        .map((item, i) => {
+                            if (i < 2) {
+                                return <BlogItem key={i} data={item} />;
+                            }
+                        })}
                 </div>
             </div>
         </section>

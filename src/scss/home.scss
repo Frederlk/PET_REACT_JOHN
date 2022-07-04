@@ -117,7 +117,7 @@
         display: inline-block;
         font-weight: 700;
         @include adaptiveValue("font-size", 26, 22, 892, 767.98, 1);
-        line-height: 38 / 26 * 100%;
+        line-height: math.div(38, 26);
         @include adaptiveValue("margin-bottom", 26, 10, 892, 767.98, 1);
         color: inherit;
         transition: color 0.3s ease 0s;
@@ -130,7 +130,7 @@
 
     &__info {
         @include adaptiveValue("font-size", 18, 16, 892, 767.98, 1);
-        line-height: 26 / 18 * 100%;
+        line-height: math.div(26, 18);
         margin-bottom: rem(15);
         .divide {
             display: inline-flex;
